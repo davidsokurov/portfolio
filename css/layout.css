@@ -188,95 +188,6 @@ ul#nav li.current a { color: #F06000; }
 /* d. Resume Section
 /* ------------------------------------------------------------------ */
 
-#resume {
-   background: #fff;
-   padding-top: 90px;
-   padding-bottom: 72px;
-   overflow: hidden;
-}
-
-#resume a, #resume a:visited  { color: #11ABB0; }
-#resume a:hover, #resume a:focus { color: #313131; }
-
-#resume h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 1.5px;
-}
-#resume h1 span {
-   border-bottom: 3px solid #11ABB0;
-   padding-bottom: 0.01px; /*this adjusts the space between the letters and the blue line on headlines*/
-}
-#resume h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
-}
-
-#resume .header-col { padding-top: 9px; }
-#resume .main-col { padding-right: 10%; }
-
-.education, .work {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
-}
-#resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
-   color: #6E7881;
-   margin-bottom: 20px;
-   margin-top: 9px;
-}
-#resume .info span {
-   margin-right: 5px;
-   margin-left: 5px;
-}
-#resume .date {
-   font: 15px/24px 'opensans-regular', sans-serif;
-   margin-top: 6px;
-}
-
-/*----------------------------------------------*/
-/*	Skill 
-/*----------------------------------------------*/
-
-.bars {
-	width: 95%;
-	float: left;
-	padding: 0;
-	text-align: left;
-}
-.bars .skills {
-  	margin-top: 36px;
-   list-style: none;
-}
-.bars li {
-   position: relative;
-  	margin-bottom: 60px;
-  	background: #ccc;
-  	height: 42px;
-  	border-radius: 3px;
-}
-.bars li em {
-	font: 15px 'opensans-bold', sans-serif;
-   color: #313131;
-	text-transform: uppercase;
-   letter-spacing: 2px;
-	font-weight: normal;
-   position: relative;
-	top: -36px;
-}
-.bar-expand {
-   position: absolute;
-   left: 0;
-   top: 0;
-
-   margin: 0;
-   padding-right: 24px;
-  	background: #313131;
-   display: inline-block;
-  	height: 42px;
-   line-height: 42px;
-   border-radius: 3px 0 0 3px;
-}
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
@@ -659,26 +570,30 @@ call-to-action .button {
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
 
-#contact {
+.contactTemplate {
    background: #191919;
    padding-top: 96px;
    padding-bottom: 102px;
    color: #636363;
 }
-#contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #11ABB0; }
-#contact a:hover, #contact a:focus { color: #fff; }
+.resumeTemplate{
+   padding-bottom: 10px;
+}
+.contactTemplate .section-head { margin-bottom: 42px; }
 
-#contact h1 {
+.contactTemplate a, .contactTemplate a:visited  { color: #11ABB0; }
+.contactTemplate a:hover, .contactTemplate a:focus { color: #fff; }
+
+.contactTemplate h1 {
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 3px;
    color: #EBEEEE;
    margin-bottom: 6px;
 }
-#contact h1 span { display: none; }
-#contact h1:before {
+.contactTemplate h1 span { display: none; }
+.contactTemplate h1:before {
    font-family: 'FontAwesome';
    content: "\f0e0";
 	padding-right: 10px;
@@ -689,107 +604,23 @@ call-to-action .button {
    color: #ebeeee;
 }
 
-#contact h4 {
+.resumeTemplate  h1:before {
+   content: "\f15c";
+}
+
+.contactTemplate h4 {
    font: 16px/24px 'opensans-bold', sans-serif;
    color: #EBEEEE;
    margin-bottom: 6px;
 }
-#contact p.lead {
+.contactTemplate p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
 }
-#contact .header-col { padding-top: 6px; }
+.contactTemplate .header-col { padding-top: 6px; }
 
 
-/* contact form */
-#contact form { margin-bottom: 30px; }
-#contact label {
-   font: 15px/24px 'opensans-bold', sans-serif;
-   margin: 12px 0;
-   color: #EBEEEE;
-	display: inline-block;
-	float: left;
-   width: 26%;
-}
-#contact input,
-#contact textarea,
-#contact select {
-   padding: 18px 20px;
-	color: #eee;
-	background: #373233;
-	margin-bottom: 42px;
-	border: 0;
-	outline: none;
-   font-size: 15px;
-   line-height: 24px;
-   width: 65%;
-}
-#contact input:focus,
-#contact textarea:focus,
-#contact select:focus {
-	color: #fff;
-	background-color: #11ABB0;
-}
-#contact button.submit {
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	color:#fff;
-   background: #0D0D0D;
-	border: none;
-   cursor: pointer;
-   height: auto;
-   display: inline-block;
-	border-radius: 3px;
-   margin-left: 26%;
-}
-#contact button.submit:hover {
-	color: #0D0D0D;
-	background: #fff;
-}
-#contact span.required {
-	color: #11ABB0;
-	font-size: 13px;
-}
-#message-warning, #message-success {
-   display: none;
-	background: #0F0F0F;
-	padding: 24px 24px;
-	margin-bottom: 36px;
-   width: 65%;
-   margin-left: 26%;
-}
-#message-warning { color: #D72828; }
-#message-success { color: #11ABB0; }
 
-#message-warning i,
-#message-success i {
-   margin-right: 10px;
-}
-#image-loader {
-   display: none;
-   position: relative;
-   left: 18px;
-   top: 17px;
-}
-
-
-/* Twitter Feed */
-#twitter {
-   margin-top: 12px;
-   padding: 0;
-}
-#twitter li {
-   margin: 6px 0px 12px 0;
-   line-height: 30px;
-}
-#twitter li span {
-   display: block;
-}
-#twitter li b a {
-   font: 13px/36px 'opensans-regular', Sans-serif;
-   color: #474747 !important;
-   border: none;
-}
 
 
 /* ------------------------------------------------------------------ */
